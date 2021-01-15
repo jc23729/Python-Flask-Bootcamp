@@ -4,7 +4,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('basic.html')
+    #my_variable is = some_variable= Jose, you can use Jinja to put that anywhere in the html
+    # some_variable = 'Jose'
+    # return render_template('basic.html', my_variable = some_variable)
+    name= "Jose"
+    letters = list(name)
+    return render_template('basic.html', name = name, letters = letters)
 
 if __name__ == '__main__':
     app.run(debug= True)
