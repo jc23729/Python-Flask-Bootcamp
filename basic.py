@@ -22,10 +22,10 @@ def other_page(name):
 """
 @app.route('/puppy/<name>')
 def puppy(name):
-    return "Upper case: {}".format(name.upper())
+    return "100th letter: {}".format(name[100])
 
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug= True)
 
