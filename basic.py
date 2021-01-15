@@ -22,7 +22,7 @@ def other_page(name):
 """
 @app.route('/puppy/<name>')
 def puppy(name):
-    return "<h1>This a page for {}</h1>".format(name)
+    return "Upper case: {}".format(name.upper())
 
 
 
