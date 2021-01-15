@@ -7,9 +7,14 @@ def index():
     #my_variable is = some_variable= Jose, you can use Jinja to put that anywhere in the html
     # some_variable = 'Jose'
     # return render_template('basic.html', my_variable = some_variable)
+    #EXAMPLE OF PASSING IN A STRING, LIST, AND DICTIONARY
+    #MAIN IDEA IS YOU GET TO CREATE WHATEVER VARIABLES YOU WANT WITH PYTHON CODE YOUR FAMILIAR WITH
+    #THEN YOU SETUP A TEMPLATE NAME THAT USUALLY SHARES THE SAME NAME, AND YOU CAN INJECT THEM WITH JINJA {{}}
     name= "Jose"
     letters = list(name)
-    return render_template('basic.html', name = name, letters = letters)
+    pup_dictionary= {'pup_name':'Sammy'}
+    return render_template('basic.html', name=name, letters=letters,
+                           pup_dictionary= pup_dictionary)
 
 if __name__ == '__main__':
     app.run(debug= True)
