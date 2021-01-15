@@ -33,6 +33,8 @@ def puppylatin(name):
     else:
         pupname = name + 'y'
 
+    return "<h1>Your Puppy latin name is: {}".format(pupname)
+
 if __name__ == '__main__':
     app.run(debug= True)
 
