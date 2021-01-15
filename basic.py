@@ -24,7 +24,14 @@ def other_page(name):
 def puppy(name):
     return "100th letter: {}".format(name[100])
 
-@app.route('/puppy_latin/<name>')
+@app.route('/puppy_name/<name>')
+def puppylatin(name):
+
+    pupname = ''
+    if name [-1] == 'y':
+        pupname = name[:-1] + 'iful'
+    else:
+        pupname = name + 'y'
 
 if __name__ == '__main__':
     app.run(debug= True)
